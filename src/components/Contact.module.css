@@ -1,0 +1,115 @@
+.section {
+  padding: 6rem 0 4rem;
+  background: var(--surface);
+}
+
+.inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  align-items: center;
+}
+
+.left {}
+
+.body {
+  font-size: 0.95rem;
+  color: rgba(240, 239, 248, 0.55);
+  line-height: 1.85;
+  margin-bottom: 2rem;
+  font-weight: 300;
+  max-width: 380px;
+}
+
+.bigCta {
+  display: inline-block;
+  padding: 0.85rem 2.2rem;
+  background: var(--accent);
+  color: #fff;
+  border-radius: var(--radius-sm);
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: transform var(--transition), background var(--transition), box-shadow var(--transition);
+}
+
+.bigCta:hover {
+  transform: translateY(-2px);
+  background: var(--accent-hover);
+  box-shadow: 0 12px 35px rgba(127, 119, 221, 0.4);
+}
+
+/* Right card */
+.card {
+  background: var(--bg);
+  border: 0.5px solid var(--border);
+  border-radius: var(--radius-xl);
+  padding: 2rem 2.2rem;
+}
+
+.cardTitle {
+  font-family: var(--font-display);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 1.5rem;
+}
+
+.contactList {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.contactItem {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.contactIcon {
+  font-size: 1.2rem;
+  width: 36px;
+  height: 36px;
+  background: var(--surface);
+  border: 0.5px solid var(--border);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.contactLabel {
+  font-size: 0.72rem;
+  color: var(--text-faint);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin-bottom: 0.15rem;
+}
+
+.contactValue {
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: var(--accent);
+  transition: color var(--transition);
+}
+
+.contactValue:hover {
+  color: var(--accent2);
+}
+
+.contactValuePlain {
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: var(--text);
+}
+
+@media (max-width: 800px) {
+  .inner {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  .body { max-width: 100%; }
+}
